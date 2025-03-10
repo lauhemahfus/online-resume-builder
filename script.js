@@ -640,7 +640,10 @@ function updateModernTemplate() {
                 }
                 html += `<div class="modern-institution">${institution.value}</div>`;
                 html += `<div class="modern-edu-details">`;
-                if (year && year.value) html += `<span>${year.value}</span>`;
+                if (year && year.value) {
+                    html += `<span>${year.value}</span>`;
+                    if (cgpa && cgpa.value) html += ' • ';
+                }
                 if (cgpa && cgpa.value) html += `<span>CGPA: ${cgpa.value}</span>`;
                 html += '</div>';
                 html += '</div>';
@@ -901,8 +904,8 @@ function updateProfessionalTemplate() {
     html += '<div class="prof-title-section">';
     html += `<h1 class="prof-name">${document.getElementById('name').value}</h1>`;
     html += '<div class="prof-contact-info">';
-    html += `<div class="prof-contact-item"><i class="prof-icon">📧</i>${document.getElementById('email').value}</div>`;
-    html += `<div class="prof-contact-item"><i class="prof-icon">📱</i>${document.getElementById('phone').value}</div>`;
+    html += `<div class="prof-contact-item"><i class="prof-icon"><i class="fas fa-envelope"></i></i>${document.getElementById('email').value}</div>`;
+    html += `<div class="prof-contact-item"><i class="prof-icon"><i class="fas fa-phone-alt"></i></i>${document.getElementById('phone').value}</div>`;
     html += '</div>';
 
     // Social Links

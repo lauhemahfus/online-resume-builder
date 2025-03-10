@@ -341,6 +341,7 @@ body {
 
 .logo {
     font-size: 22px; 
+    margin-left: 40px;
     font-weight: bold;
     color: white;
     text-decoration: none;
@@ -405,6 +406,7 @@ body {
 .template-select {
     padding: 10px 25px;
     border-radius: 25px;
+    margin-right: 50px;
     border: 2px solid white;
     background: transparent;
     color: white;
